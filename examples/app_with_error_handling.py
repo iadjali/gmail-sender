@@ -8,4 +8,4 @@ try:
         body="Test",
     )
 except GmailSendError as e:
-    print("Failed to send:", e)\n
+    print("Failed to send:", e)

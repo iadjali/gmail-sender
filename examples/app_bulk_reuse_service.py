@@ -11,4 +11,4 @@ for r in recipients:
         subject="Hello (reused service)",
         body=f"Hi {r}!",
         service=service,  # <- reuse the same Gmail API client
-    )\n
+    )

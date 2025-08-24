@@ -9,5 +9,9 @@
   "editor.formatOnSave": true,
   "editor.codeActionsOnSave": { "source.organizeImports": "explicit" },
   "files.insertFinalNewline": true,
-  "python.terminal.activateEnvironment": true
+  "python.terminal.activateEnvironment": true,
+  
+  //Prevent VS Code from auto-detecting git repositories in parent folders
+  "git.autoRepositoryDetection": "subFolders",
+  "git.openRepositoryInParentFolders": "never"
 }

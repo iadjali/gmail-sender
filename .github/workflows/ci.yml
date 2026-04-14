@@ -19,11 +19,11 @@ jobs:
           pip install -r requirements.txt
           pip install ruff mypy
       - name: Lint with ruff
-        run: ruff check .
+        run: python -m ruff check .
       - name: Type check with mypy
-        run: mypy gmail_sender.py
+        run: python -m mypy gmail_sender.py
       - name: Run tests
-        run: pytest
+        run: python -m pytest
       - name: Smoke compile
         run: |
           python -m compileall -q .

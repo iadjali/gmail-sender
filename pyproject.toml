@@ -1,0 +1,49 @@
+[build-system]
+requires = ["setuptools", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "gmail-sender"
+version = "1.0.0"
+description = "Minimal, safe command-line utility to send email via the Gmail API using OAuth 2.0"
+readme = "README.md"
+license = {file = "LICENSE"}
+requires-python = ">=3.11"
+authors = [
+    {name = "Your Name", email = "your.email@example.com"},
+]
+maintainers = [
+    {name = "Your Name", email = "your.email@example.com"},
+]
+keywords = ["gmail", "email", "api", "oauth", "google"]
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Intended Audience :: Developers",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Topic :: Communications :: Email",
+    "Topic :: Software Development :: Libraries :: Python Modules",
+]
+dependencies = [
+    "google-auth",
+    "google-auth-oauthlib",
+    "google-api-python-client",
+]
+
+[project.urls]
+Homepage = "https://github.com/yourusername/gmail-sender"
+Repository = "https://github.com/yourusername/gmail-sender"
+Issues = "https://github.com/yourusername/gmail-sender/issues"
+Changelog = "https://github.com/yourusername/gmail-sender/blob/main/CHANGELOG.md"
+
+[project.scripts]
+gmail-sender = "gmail_sender:main"
+
+[tool.setuptools.packages.find]
+where = ["."]
+
+[tool.setuptools.package-data]
+gmail_sender = ["py.typed"]

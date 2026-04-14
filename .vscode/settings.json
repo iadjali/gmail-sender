@@ -1,0 +1,13 @@
+{
+  // Pick the Windows venv interpreter (or just delete this line entirely and select it manually)
+  "python.defaultInterpreterPath": ".venv\\Scripts\\python.exe",
+
+  // We don't ship tests here; disable discovery to avoid noisy errors
+  "python.testing.pytestEnabled": false,
+  "python.testing.unittestEnabled": false,
+
+  "editor.formatOnSave": true,
+  "editor.codeActionsOnSave": { "source.organizeImports": "explicit" },
+  "files.insertFinalNewline": true,
+  "python.terminal.activateEnvironment": true
+}

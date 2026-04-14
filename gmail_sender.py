@@ -8,7 +8,7 @@ import os
 import re
 from email.message import EmailMessage
 from pathlib import Path
-from typing import Optional, Sequence
+from typing import Any, Dict, Optional, Sequence
 
 from google.auth.transport.requests import Request
 from google.oauth2.credentials import Credentials
@@ -85,7 +85,7 @@ def _authorize(scopes: list[str]) -> Credentials:
     return creds
 
 
-def get_service(scopes: list[str] | None = None):
+def get_service(scopes: list[str] | None = None) -> Resource:
     """Return an authorized Gmail API service instance."""
     if scopes is None:
         scopes = SCOPES
@@ -123,7 +123,7 @@ def send_email(
     bcc: Optional[str] = None,
     attachments: Optional[Sequence[Path]] = None,
     service: Optional[Resource] = None,
-) -> dict:
+) -> Any:
     """
     Create and send an email message via Gmail API.
 
